@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		A81FA59C26783C680025F8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FA59B26783C680025F8F6 /* AppDelegate.swift */; };
 		A81FA59E26783C680025F8F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FA59D26783C680025F8F6 /* SceneDelegate.swift */; };
-		A81FA5A026783C680025F8F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FA59F26783C680025F8F6 /* ViewController.swift */; };
-		A81FA5A326783C680025F8F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81FA5A126783C680025F8F6 /* Main.storyboard */; };
+		A81FA5A026783C680025F8F6 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FA59F26783C680025F8F6 /* GalleryViewController.swift */; };
 		A81FA5A526783C6B0025F8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A81FA5A426783C6B0025F8F6 /* Assets.xcassets */; };
-		A81FA5A826783C6B0025F8F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81FA5A626783C6B0025F8F6 /* LaunchScreen.storyboard */; };
+		A87CF2A42678600F00CA51E9 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2A32678600F00CA51E9 /* GalleryView.swift */; };
+		A87CF2A6267860C600CA51E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2A5267860C600CA51E9 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A81FA59826783C680025F8F6 /* Stefanini-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stefanini-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81FA59B26783C680025F8F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A81FA59D26783C680025F8F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A81FA59F26783C680025F8F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A81FA5A226783C680025F8F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A81FA59F26783C680025F8F6 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		A81FA5A426783C6B0025F8F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A81FA5A726783C6B0025F8F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A81FA5A926783C6B0025F8F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A87CF2A32678600F00CA51E9 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		A87CF2A5267860C600CA51E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +58,11 @@
 			children = (
 				A81FA59B26783C680025F8F6 /* AppDelegate.swift */,
 				A81FA59D26783C680025F8F6 /* SceneDelegate.swift */,
-				A81FA59F26783C680025F8F6 /* ViewController.swift */,
-				A81FA5A126783C680025F8F6 /* Main.storyboard */,
+				A81FA59F26783C680025F8F6 /* GalleryViewController.swift */,
+				A87CF2A32678600F00CA51E9 /* GalleryView.swift */,
 				A81FA5A426783C6B0025F8F6 /* Assets.xcassets */,
-				A81FA5A626783C6B0025F8F6 /* LaunchScreen.storyboard */,
 				A81FA5A926783C6B0025F8F6 /* Info.plist */,
+				A87CF2A5267860C600CA51E9 /* Constants.swift */,
 			);
 			path = "Stefanini-Challenge";
 			sourceTree = "<group>";
@@ -124,9 +124,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A81FA5A826783C6B0025F8F6 /* LaunchScreen.storyboard in Resources */,
 				A81FA5A526783C6B0025F8F6 /* Assets.xcassets in Resources */,
-				A81FA5A326783C680025F8F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,32 +135,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A81FA5A026783C680025F8F6 /* ViewController.swift in Sources */,
+				A87CF2A6267860C600CA51E9 /* Constants.swift in Sources */,
+				A81FA5A026783C680025F8F6 /* GalleryViewController.swift in Sources */,
 				A81FA59C26783C680025F8F6 /* AppDelegate.swift in Sources */,
 				A81FA59E26783C680025F8F6 /* SceneDelegate.swift in Sources */,
+				A87CF2A42678600F00CA51E9 /* GalleryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A81FA5A126783C680025F8F6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A81FA5A226783C680025F8F6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A81FA5A626783C6B0025F8F6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A81FA5A726783C6B0025F8F6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A81FA5AA26783C6B0025F8F6 /* Debug */ = {
