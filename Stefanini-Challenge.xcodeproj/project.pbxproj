@@ -17,6 +17,8 @@
 		A87CF2AC2678656700CA51E9 /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2AB2678656700CA51E9 /* FetchService.swift */; };
 		A87CF2AE267865A100CA51E9 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2AD267865A100CA51E9 /* Gallery.swift */; };
 		A87CF2B0267869E900CA51E9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2AF267869E900CA51E9 /* Endpoints.swift */; };
+		A8887ADD2678F8A90008AA5A /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887ADC2678F8A90008AA5A /* CollectionViewDataSource.swift */; };
+		A8887ADF2678F92C0008AA5A /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887ADE2678F92C0008AA5A /* GalleryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		A87CF2AB2678656700CA51E9 /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		A87CF2AD267865A100CA51E9 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		A87CF2AF267869E900CA51E9 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		A8887ADC2678F8A90008AA5A /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		A8887ADE2678F92C0008AA5A /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A87CF2A32678600F00CA51E9 /* GalleryView.swift */,
+				A8887ADE2678F92C0008AA5A /* GalleryCell.swift */,
 				A81FA59F26783C680025F8F6 /* GalleryViewController.swift */,
 				A87CF2A82678653800CA51E9 /* GalleryPresenter.swift */,
 				A87CF2AD267865A100CA51E9 /* Gallery.swift */,
@@ -91,6 +96,7 @@
 			children = (
 				A87CF2AB2678656700CA51E9 /* FetchService.swift */,
 				A87CF2AF267869E900CA51E9 /* Endpoints.swift */,
+				A8887ADC2678F8A90008AA5A /* CollectionViewDataSource.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -165,9 +171,11 @@
 			files = (
 				A87CF2AE267865A100CA51E9 /* Gallery.swift in Sources */,
 				A87CF2A6267860C600CA51E9 /* Constants.swift in Sources */,
+				A8887ADF2678F92C0008AA5A /* GalleryCell.swift in Sources */,
 				A87CF2A92678653800CA51E9 /* GalleryPresenter.swift in Sources */,
 				A81FA5A026783C680025F8F6 /* GalleryViewController.swift in Sources */,
 				A81FA59C26783C680025F8F6 /* AppDelegate.swift in Sources */,
+				A8887ADD2678F8A90008AA5A /* CollectionViewDataSource.swift in Sources */,
 				A81FA59E26783C680025F8F6 /* SceneDelegate.swift in Sources */,
 				A87CF2AC2678656700CA51E9 /* FetchService.swift in Sources */,
 				A87CF2A42678600F00CA51E9 /* GalleryView.swift in Sources */,
