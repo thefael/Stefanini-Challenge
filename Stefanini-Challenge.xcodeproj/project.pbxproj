@@ -13,6 +13,10 @@
 		A81FA5A526783C6B0025F8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A81FA5A426783C6B0025F8F6 /* Assets.xcassets */; };
 		A87CF2A42678600F00CA51E9 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2A32678600F00CA51E9 /* GalleryView.swift */; };
 		A87CF2A6267860C600CA51E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2A5267860C600CA51E9 /* Constants.swift */; };
+		A87CF2A92678653800CA51E9 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2A82678653800CA51E9 /* GalleryPresenter.swift */; };
+		A87CF2AC2678656700CA51E9 /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2AB2678656700CA51E9 /* FetchService.swift */; };
+		A87CF2AE267865A100CA51E9 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2AD267865A100CA51E9 /* Gallery.swift */; };
+		A87CF2B0267869E900CA51E9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2AF267869E900CA51E9 /* Endpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A81FA5A926783C6B0025F8F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A87CF2A32678600F00CA51E9 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		A87CF2A5267860C600CA51E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A87CF2A82678653800CA51E9 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
+		A87CF2AB2678656700CA51E9 /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
+		A87CF2AD267865A100CA51E9 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		A87CF2AF267869E900CA51E9 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,35 @@
 		A81FA59A26783C680025F8F6 /* Stefanini-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				A87CF2AA2678655500CA51E9 /* Network */,
+				A87CF2A7267864BC00CA51E9 /* Gallery */,
 				A81FA59B26783C680025F8F6 /* AppDelegate.swift */,
 				A81FA59D26783C680025F8F6 /* SceneDelegate.swift */,
-				A81FA59F26783C680025F8F6 /* GalleryViewController.swift */,
-				A87CF2A32678600F00CA51E9 /* GalleryView.swift */,
 				A81FA5A426783C6B0025F8F6 /* Assets.xcassets */,
 				A81FA5A926783C6B0025F8F6 /* Info.plist */,
 				A87CF2A5267860C600CA51E9 /* Constants.swift */,
 			);
 			path = "Stefanini-Challenge";
+			sourceTree = "<group>";
+		};
+		A87CF2A7267864BC00CA51E9 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				A87CF2A32678600F00CA51E9 /* GalleryView.swift */,
+				A81FA59F26783C680025F8F6 /* GalleryViewController.swift */,
+				A87CF2A82678653800CA51E9 /* GalleryPresenter.swift */,
+				A87CF2AD267865A100CA51E9 /* Gallery.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		A87CF2AA2678655500CA51E9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A87CF2AB2678656700CA51E9 /* FetchService.swift */,
+				A87CF2AF267869E900CA51E9 /* Endpoints.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,11 +163,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A87CF2AE267865A100CA51E9 /* Gallery.swift in Sources */,
 				A87CF2A6267860C600CA51E9 /* Constants.swift in Sources */,
+				A87CF2A92678653800CA51E9 /* GalleryPresenter.swift in Sources */,
 				A81FA5A026783C680025F8F6 /* GalleryViewController.swift in Sources */,
 				A81FA59C26783C680025F8F6 /* AppDelegate.swift in Sources */,
 				A81FA59E26783C680025F8F6 /* SceneDelegate.swift in Sources */,
+				A87CF2AC2678656700CA51E9 /* FetchService.swift in Sources */,
 				A87CF2A42678600F00CA51E9 /* GalleryView.swift in Sources */,
+				A87CF2B0267869E900CA51E9 /* Endpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
