@@ -8,6 +8,7 @@ class GalleryCell: UICollectionViewCell {
             self.fetchImage()
         }
     }
+    var imageTask: URLSessionDataTask?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,15 +32,22 @@ class GalleryCell: UICollectionViewCell {
 
     private func fetchImage() {
         guard let link = imageLink, let url = URL(string: link) else { return }
-        presenter.fetchImage(from: url) { result in
+        imageTask = presenter.fetchImage(from: url) { result in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
                     self.imageView.image = image
                 }
             case .failure(let error):
-                print(error)
+                print("Erro no cell.fetchImage: \(error)")
             }
         }
+    }
+
+    override func prepareForReuse() {
+        DispatchQueue.main.async {
+            self.imageView.image = nil
+        }
+        imageTask?.suspend()
     }
 }
