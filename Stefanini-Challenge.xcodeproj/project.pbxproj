@@ -19,6 +19,8 @@
 		A87CF2B0267869E900CA51E9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CF2AF267869E900CA51E9 /* Endpoints.swift */; };
 		A8887ADD2678F8A90008AA5A /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887ADC2678F8A90008AA5A /* CollectionViewDataSource.swift */; };
 		A8887ADF2678F92C0008AA5A /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887ADE2678F92C0008AA5A /* GalleryCell.swift */; };
+		A8887AE2267925240008AA5A /* FetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AE1267925240008AA5A /* FetchError.swift */; };
+		A8887AE426793E820008AA5A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AE326793E820008AA5A /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		A87CF2AF267869E900CA51E9 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		A8887ADC2678F8A90008AA5A /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		A8887ADE2678F92C0008AA5A /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		A8887AE1267925240008AA5A /* FetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchError.swift; sourceTree = "<group>"; };
+		A8887AE326793E820008AA5A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		A81FA59A26783C680025F8F6 /* Stefanini-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				A8887AE02679250E0008AA5A /* Common */,
 				A87CF2AA2678655500CA51E9 /* Network */,
 				A87CF2A7267864BC00CA51E9 /* Gallery */,
 				A81FA59B26783C680025F8F6 /* AppDelegate.swift */,
@@ -99,6 +104,15 @@
 				A8887ADC2678F8A90008AA5A /* CollectionViewDataSource.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A8887AE02679250E0008AA5A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A8887AE1267925240008AA5A /* FetchError.swift */,
+				A8887AE326793E820008AA5A /* ImageCache.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +184,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A87CF2AE267865A100CA51E9 /* Gallery.swift in Sources */,
+				A8887AE426793E820008AA5A /* ImageCache.swift in Sources */,
 				A87CF2A6267860C600CA51E9 /* Constants.swift in Sources */,
 				A8887ADF2678F92C0008AA5A /* GalleryCell.swift in Sources */,
+				A8887AE2267925240008AA5A /* FetchError.swift in Sources */,
 				A87CF2A92678653800CA51E9 /* GalleryPresenter.swift in Sources */,
 				A81FA5A026783C680025F8F6 /* GalleryViewController.swift in Sources */,
 				A81FA59C26783C680025F8F6 /* AppDelegate.swift in Sources */,

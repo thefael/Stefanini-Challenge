@@ -18,6 +18,7 @@ struct Gallery: Decodable {
 
 struct Post: Decodable {
     let id: String
+    let type: String
     let link: String
 }
 
