@@ -2,7 +2,7 @@ import UIKit
 
 protocol GalleryPresenterType {
     func fetchGallery()
-    func fetchImage(from url: URL?, _ completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> URLSessionDataTask?
+    func fetchImage(from url: URL?, _ completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask?
 }
 
 class GalleryPresenter: GalleryPresenterType {
@@ -25,8 +25,8 @@ class GalleryPresenter: GalleryPresenterType {
         }
     }
 
-    func fetchImage(from url: URL?, _ completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> URLSessionDataTask? {
-        let dataTask = service.fetchImage(from: url) { result in
+    func fetchImage(from url: URL?, _ completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask? {
+        let task = service.fetchImage(from: url) { result in
             switch result {
             case .success(let image):
                 completion(.success(image))
@@ -34,7 +34,7 @@ class GalleryPresenter: GalleryPresenterType {
                 completion(.failure(error))
             }
         }
-        return dataTask
+        return task
     }
 
     private func getImageLinks(from galleryData: GalleryData) -> [String] {

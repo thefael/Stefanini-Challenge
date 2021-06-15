@@ -2,13 +2,8 @@ import UIKit
 
 class GalleryCell: UICollectionViewCell {
     let imageView = UIImageView()
-    let presenter = GalleryPresenter()
-    var imageLink: String? {
-        didSet {
-            self.fetchImage()
-        }
-    }
-    var imageTask: URLSessionDataTask?
+    var imageLink: String?
+    var imageTask: SuspendableTask?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,9 +25,9 @@ class GalleryCell: UICollectionViewCell {
         imageView.clipsToBounds = true
     }
 
-    private func fetchImage() {
+    func fetchImage(from imageGateway: ImageGateway) {
         guard let link = imageLink, let url = URL(string: link) else { return }
-        imageTask = presenter.fetchImage(from: url) { result in
+        imageTask = imageGateway.fetchImage(from: url) { result in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {

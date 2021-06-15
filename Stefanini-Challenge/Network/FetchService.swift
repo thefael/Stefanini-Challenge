@@ -2,7 +2,7 @@ import UIKit
 
 protocol FetchServiceType {
     func fetchData<T: Decodable>(from request: URLRequest?, completion: @escaping ((Result<T, FetchError>) -> Void))
-    func fetchImage(from url: URL?, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> URLSessionDataTask?
+    func fetchImage(from url: URL?, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask?
 }
 
 class FetchService: FetchServiceType {
@@ -28,16 +28,17 @@ class FetchService: FetchServiceType {
         }.resume()
     }
 
-    func fetchImage(from url: URL?, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> URLSessionDataTask? {
+    func fetchImage(from url: URL?, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask? {
         guard let url = url else { completion(.failure(.invalidURL)); return nil }
         let dataTask = session.dataTask(with: url) { data, _, _ in
-            if let data = data, let image = UIImage(data: data) {
+            if let data = data,
+               let image = UIImage(data: data) {
                 completion(.success(image))
             } else {
                 completion(.failure(.failedToDecodeData))
             }
         }
         dataTask.resume()
-        return dataTask
+        return SuspendableDataTask(task: dataTask)
     }
 }
