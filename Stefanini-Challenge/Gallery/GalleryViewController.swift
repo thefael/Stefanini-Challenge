@@ -11,7 +11,4 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         title = "Galeria de imagens"
     }
-
-
 }
-
