@@ -16,7 +16,7 @@ class GalleryView: UIView {
 
     private func createFlowLayout() {
         let width = Constants.screen.width/4
-        let height = Constants.screen.height/2
+        let height = Constants.screen.height/4
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: width, height: height)
         layout.minimumInteritemSpacing = 0
