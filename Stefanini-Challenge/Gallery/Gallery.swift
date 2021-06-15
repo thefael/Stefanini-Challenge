@@ -1,11 +1,15 @@
 import Foundation
 
 struct GalleryData: Decodable {
-    let data: [Gallery]
+    let gallery: [Gallery]
+
+    enum CodingKeys: String, CodingKey {
+        case gallery = "data"
+    }
 }
 
 struct Gallery: Decodable {
-    let post: [Post]
+    let post: [Post]?
 
     enum CodingKeys: String, CodingKey {
         case post = "images"
