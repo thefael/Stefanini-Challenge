@@ -1,8 +1,19 @@
-//
-//  Gallery.swift
-//  Stefanini-Challenge
-//
-//  Created by Rafael Rodrigues on 15/06/21.
-//
-
 import Foundation
+
+struct GalleryData: Decodable {
+    let data: [Gallery]
+}
+
+struct Gallery: Decodable {
+    let post: [Post]
+
+    enum CodingKeys: String, CodingKey {
+        case post = "images"
+    }
+}
+
+struct Post: Decodable {
+    let id: String
+    let link: String
+}
+
