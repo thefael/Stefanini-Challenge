@@ -1,8 +1,16 @@
-//
-//  ImageCacheMock.swift
-//  Stefanini-Challenge-Tests
-//
-//  Created by Rafael Rodrigues on 16/06/21.
-//
+@testable import Stefanini_Challenge
+import UIKit
 
-import Foundation
+class ImageCacheMock: ImageCacheType {
+    var didCallSet = false
+    var didCallGetImage = true
+    var getImageHandler: ((NSURL) -> UIImage?)?
+
+    func set(image: UIImage, forKey key: NSURL) {
+        didCallSet = true
+    }
+
+    func getImage(forKey key: NSURL) -> UIImage? {
+        getImageHandler?(key)
+    }
+}
