@@ -2,7 +2,7 @@ import UIKit
 
 protocol URLSessionAdaptable {
     func fetchData(request: URLRequest, completion: @escaping (Result<Data, FetchError>) -> Void)
-    func fetchImage(from url: URL, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask
+    func fetchImage(from url: URL, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask?
 }
 
 class URLSessionAdapter: URLSessionAdaptable {
@@ -22,7 +22,7 @@ class URLSessionAdapter: URLSessionAdaptable {
         }.resume()
     }
 
-    func fetchImage(from url: URL, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask {
+    func fetchImage(from url: URL, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask? {
         let imageTask = session.dataTask(with: url) { data, _, _ in
             if let data = data, let image = UIImage(data: data) {
                 completion(.success(image))
