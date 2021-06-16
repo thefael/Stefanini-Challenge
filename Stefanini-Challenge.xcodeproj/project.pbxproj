@@ -30,6 +30,11 @@
 		A8D04681267A6B1F0078CC04 /* URLSessionAdapterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04680267A6B1F0078CC04 /* URLSessionAdapterMock.swift */; };
 		A8D04683267A7ABA0078CC04 /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04682267A7ABA0078CC04 /* JSONObject.swift */; };
 		A8D04686267A7B320078CC04 /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04685267A7B320078CC04 /* ImageCacheTests.swift */; };
+		A8D04689267A7D670078CC04 /* GalleryPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04688267A7D670078CC04 /* GalleryPresenterTests.swift */; };
+		A8D0468B267A7DB00078CC04 /* FetchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0468A267A7DB00078CC04 /* FetchServiceMock.swift */; };
+		A8D0468D267A7FEF0078CC04 /* GalleryPresentableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0468C267A7FEF0078CC04 /* GalleryPresentableMock.swift */; };
+		A8D0468F267A86340078CC04 /* ImageGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */; };
+		A8D04691267A872A0078CC04 /* GalleryPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		A8D04680267A6B1F0078CC04 /* URLSessionAdapterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapterMock.swift; sourceTree = "<group>"; };
 		A8D04682267A7ABA0078CC04 /* JSONObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObject.swift; sourceTree = "<group>"; };
 		A8D04685267A7B320078CC04 /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
+		A8D04688267A7D670078CC04 /* GalleryPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenterTests.swift; sourceTree = "<group>"; };
+		A8D0468A267A7DB00078CC04 /* FetchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchServiceMock.swift; sourceTree = "<group>"; };
+		A8D0468C267A7FEF0078CC04 /* GalleryPresentableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresentableMock.swift; sourceTree = "<group>"; };
+		A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGatewayTests.swift; sourceTree = "<group>"; };
+		A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenterMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +171,7 @@
 		A8D0466F267A55180078CC04 /* Stefanini-Challenge-Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A8D04687267A7D510078CC04 /* GalleryTests */,
 				A8D0467A267A56540078CC04 /* Helpers */,
 				A8D04678267A55AA0078CC04 /* FetchServiceTests.swift */,
 				A8D04685267A7B320078CC04 /* ImageCacheTests.swift */,
@@ -183,8 +194,20 @@
 			children = (
 				A8D0467C267A566F0078CC04 /* ImageCacheMock.swift */,
 				A8D04680267A6B1F0078CC04 /* URLSessionAdapterMock.swift */,
+				A8D0468A267A7DB00078CC04 /* FetchServiceMock.swift */,
+				A8D0468C267A7FEF0078CC04 /* GalleryPresentableMock.swift */,
+				A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A8D04687267A7D510078CC04 /* GalleryTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8D04688267A7D670078CC04 /* GalleryPresenterTests.swift */,
+				A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */,
+			);
+			path = GalleryTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +332,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D0468F267A86340078CC04 /* ImageGatewayTests.swift in Sources */,
 				A8D04683267A7ABA0078CC04 /* JSONObject.swift in Sources */,
 				A8D04686267A7B320078CC04 /* ImageCacheTests.swift in Sources */,
+				A8D04691267A872A0078CC04 /* GalleryPresenterMock.swift in Sources */,
+				A8D0468B267A7DB00078CC04 /* FetchServiceMock.swift in Sources */,
 				A8D0467D267A566F0078CC04 /* ImageCacheMock.swift in Sources */,
+				A8D04689267A7D670078CC04 /* GalleryPresenterTests.swift in Sources */,
 				A8D04681267A6B1F0078CC04 /* URLSessionAdapterMock.swift in Sources */,
+				A8D0468D267A7FEF0078CC04 /* GalleryPresentableMock.swift in Sources */,
 				A8D04679267A55AA0078CC04 /* FetchServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
