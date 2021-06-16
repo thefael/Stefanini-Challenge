@@ -5,11 +5,11 @@ protocol ImageGatewayType {
 }
 
 class ImageGateway: ImageGatewayType {
-    let presenter: GalleryPresenterType
+    let service: FetchServiceType
     let cache: ImageCacheType
 
-    init(presenter: GalleryPresenterType = GalleryPresenter(), cache: ImageCacheType = ImageCache()) {
-        self.presenter = presenter
+    init(service: FetchServiceType = FetchService.shared, cache: ImageCacheType = ImageCache()) {
+        self.service = service
         self.cache = cache
     }
 
@@ -19,7 +19,7 @@ class ImageGateway: ImageGatewayType {
             completion(.success(image))
             return nil
         } else {
-            let task = presenter.fetchImage(from: url) { result in
+            let task = service.fetchImage(from: url) { result in
                 switch result {
                 case .success(let image):
                     self.cache.set(image: image, forKey: url as NSURL)

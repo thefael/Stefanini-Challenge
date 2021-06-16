@@ -35,6 +35,7 @@
 		A8D0468D267A7FEF0078CC04 /* GalleryPresentableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0468C267A7FEF0078CC04 /* GalleryPresentableMock.swift */; };
 		A8D0468F267A86340078CC04 /* ImageGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */; };
 		A8D04691267A872A0078CC04 /* GalleryPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */; };
+		A8D04693267A95D70078CC04 /* UIImage+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04692267A95D70078CC04 /* UIImage+Compression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		A8D0468C267A7FEF0078CC04 /* GalleryPresentableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresentableMock.swift; sourceTree = "<group>"; };
 		A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGatewayTests.swift; sourceTree = "<group>"; };
 		A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenterMock.swift; sourceTree = "<group>"; };
+		A8D04692267A95D70078CC04 /* UIImage+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Compression.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				A8887AE326793E820008AA5A /* ImageCache.swift */,
 				A8887AE9267972680008AA5A /* SuspendableTask.swift */,
 				A8887AEB267989C60008AA5A /* PageCounter.swift */,
+				A8D04692267A95D70078CC04 /* UIImage+Compression.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D04693267A95D70078CC04 /* UIImage+Compression.swift in Sources */,
 				A8887AE626793F4F0008AA5A /* ImageGateway.swift in Sources */,
 				A87CF2AE267865A100CA51E9 /* Gallery.swift in Sources */,
 				A8887AE426793E820008AA5A /* ImageCache.swift in Sources */,

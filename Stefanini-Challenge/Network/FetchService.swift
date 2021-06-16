@@ -8,6 +8,7 @@ protocol FetchServiceType {
 class FetchService: FetchServiceType {
     let session: URLSessionAdaptable
     let decoder: JSONDecoder
+    static let shared = FetchService()
 
     init(session: URLSessionAdaptable = URLSessionAdapter(), decoder: JSONDecoder = .init()) {
         self.session = session
@@ -34,7 +35,8 @@ class FetchService: FetchServiceType {
         let task = session.fetchImage(from: url) { result in
             switch result {
             case .success(let image):
-                completion(.success(image))
+                guard let newImage = image.jpeg(.lowest).flatMap(UIImage.init) else { return }
+                completion(.success(newImage))
             case .failure(let error):
                 completion(.failure(error))
             }
