@@ -10,6 +10,7 @@ class GalleryViewController: UIViewController {
     let presenter = GalleryPresenter()
     let imageGateway = ImageGateway()
     let dataSource = CollectionViewDataSource<String, GalleryCell>()
+    var scrollViewDidEndScrolling = false
 
     override func loadView() {
         view = galleryView
@@ -19,10 +20,15 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         title = "Galeria de imagens"
         presenter.presentable = self
-        galleryView.collectionView.dataSource = dataSource
-        galleryView.collectionView.register(GalleryCell.self, forCellWithReuseIdentifier: String(describing: GalleryCell.self))
+        configureCollectionView()
         configureCell()
         presenter.fetchGallery()
+    }
+
+    private func configureCollectionView() {
+        galleryView.collectionView.dataSource = dataSource
+        galleryView.collectionView.delegate = self
+        galleryView.collectionView.register(GalleryCell.self, forCellWithReuseIdentifier: String(describing: GalleryCell.self))
     }
 
     private func configureCell() {
@@ -45,6 +51,7 @@ extension GalleryViewController: GalleryPresentable {
             self.galleryView.collectionView.reloadData()
             self.galleryView.activity.stopAnimating()
         }
+        scrollViewDidEndScrolling = false
     }
 
     func presentError(_ error: Error) {
@@ -52,3 +59,16 @@ extension GalleryViewController: GalleryPresentable {
     }
 }
 
+extension GalleryViewController: UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let height = scrollView.frame.size.height
+        let contentYoffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+        if distanceFromBottom < height
+            && scrollViewDidEndScrolling == false
+            && scrollView.contentSize.height > 0 {
+            scrollViewDidEndScrolling = true
+            presenter.fetchGallery()
+        }
+    }
+}
