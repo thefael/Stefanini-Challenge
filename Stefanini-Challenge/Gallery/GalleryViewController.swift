@@ -51,3 +51,4 @@ extension GalleryViewController: GalleryPresentable {
         showAlert(title: "Deu ruim, man!", message: error.localizedDescription, actionTitle: "Ok")
     }
 }
+

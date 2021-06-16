@@ -14,7 +14,7 @@ class GalleryPresenter: GalleryPresenterType {
     }
 
     func fetchGallery() {
-        service.fetchData(from: Endpoints.searchGalleryRequest()) { (result: Result<GalleryData, FetchError>) in
+        service.fetchData(from: Endpoints.getSearchGalleryRequest()) { (result: Result<GalleryData, FetchError>) in
             switch result {
             case .success(let galleryData):
                 let links = self.getImageLinks(from: galleryData)

@@ -21,6 +21,9 @@
 		A8887ADF2678F92C0008AA5A /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887ADE2678F92C0008AA5A /* GalleryCell.swift */; };
 		A8887AE2267925240008AA5A /* FetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AE1267925240008AA5A /* FetchError.swift */; };
 		A8887AE426793E820008AA5A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AE326793E820008AA5A /* ImageCache.swift */; };
+		A8887AE626793F4F0008AA5A /* ImageGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AE526793F4F0008AA5A /* ImageGateway.swift */; };
+		A8887AEA267972680008AA5A /* SuspendableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AE9267972680008AA5A /* SuspendableTask.swift */; };
+		A8887AEC267989C60008AA5A /* PageCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AEB267989C60008AA5A /* PageCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		A8887ADE2678F92C0008AA5A /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		A8887AE1267925240008AA5A /* FetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchError.swift; sourceTree = "<group>"; };
 		A8887AE326793E820008AA5A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		A8887AE526793F4F0008AA5A /* ImageGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGateway.swift; sourceTree = "<group>"; };
+		A8887AE9267972680008AA5A /* SuspendableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendableTask.swift; sourceTree = "<group>"; };
+		A8887AEB267989C60008AA5A /* PageCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 				A81FA59F26783C680025F8F6 /* GalleryViewController.swift */,
 				A87CF2A82678653800CA51E9 /* GalleryPresenter.swift */,
 				A87CF2AD267865A100CA51E9 /* Gallery.swift */,
+				A8887AE526793F4F0008AA5A /* ImageGateway.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -111,6 +118,8 @@
 			children = (
 				A8887AE1267925240008AA5A /* FetchError.swift */,
 				A8887AE326793E820008AA5A /* ImageCache.swift */,
+				A8887AE9267972680008AA5A /* SuspendableTask.swift */,
+				A8887AEB267989C60008AA5A /* PageCounter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8887AE626793F4F0008AA5A /* ImageGateway.swift in Sources */,
 				A87CF2AE267865A100CA51E9 /* Gallery.swift in Sources */,
 				A8887AE426793E820008AA5A /* ImageCache.swift in Sources */,
 				A87CF2A6267860C600CA51E9 /* Constants.swift in Sources */,
@@ -191,6 +201,8 @@
 				A87CF2A92678653800CA51E9 /* GalleryPresenter.swift in Sources */,
 				A81FA5A026783C680025F8F6 /* GalleryViewController.swift in Sources */,
 				A81FA59C26783C680025F8F6 /* AppDelegate.swift in Sources */,
+				A8887AEC267989C60008AA5A /* PageCounter.swift in Sources */,
+				A8887AEA267972680008AA5A /* SuspendableTask.swift in Sources */,
 				A8887ADD2678F8A90008AA5A /* CollectionViewDataSource.swift in Sources */,
 				A81FA59E26783C680025F8F6 /* SceneDelegate.swift in Sources */,
 				A87CF2AC2678656700CA51E9 /* FetchService.swift in Sources */,
