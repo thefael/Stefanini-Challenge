@@ -6,39 +6,39 @@ protocol FetchServiceType {
 }
 
 class FetchService: FetchServiceType {
-    let session: URLSession
+    let session: URLSessionAdaptable
     let decoder: JSONDecoder
 
-    init(session: URLSession = .shared, decoder: JSONDecoder = .init()) {
+    init(session: URLSessionAdaptable = URLSessionAdapter(), decoder: JSONDecoder = .init()) {
         self.session = session
         self.decoder = decoder
     }
 
     func fetchData<T: Decodable>(from request: URLRequest?, completion: @escaping ((Result<T, FetchError>) -> Void)) {
         guard let request = request else { completion(.failure(.invalidRequest)); return }
-        session.dataTask(with: request) { data, _, _ in
-            if let data = data {
+        session.fetchData(request: request) { result in
+            switch result {
+            case .success(let data):
                 do {
                     let model = try self.decoder.decode(T.self, from: data)
                     completion(.success(model))
                 } catch { completion(.failure(.failedToDecodeData)) }
-            } else {
-                completion(.failure(.invalidData))
+            case .failure(let error):
+                completion(.failure(error))
             }
-        }.resume()
+        }
     }
 
     func fetchImage(from url: URL?, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask? {
         guard let url = url else { completion(.failure(.invalidURL)); return nil }
-        let dataTask = session.dataTask(with: url) { data, _, _ in
-            if let data = data,
-               let image = UIImage(data: data) {
+        let task = session.fetchImage(from: url) { result in
+            switch result {
+            case .success(let image):
                 completion(.success(image))
-            } else {
-                completion(.failure(.failedToDecodeData))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
-        dataTask.resume()
-        return SuspendableDataTask(task: dataTask)
+        return task
     }
 }
