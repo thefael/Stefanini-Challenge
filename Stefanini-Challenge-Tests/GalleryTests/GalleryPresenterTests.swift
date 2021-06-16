@@ -29,29 +29,6 @@ class GalleryPresenterTests: XCTestCase {
         let presentedError = presentableMock.presentedError
         XCTAssertEqual(presentedError as? FetchError, .invalidData)
     }
-
-    func test_fetchImage_whenResultIsSuccess_shouldCallcompletion_withCorrectImage() {
-        let _ = presenter.fetchImage(from: testURL) { result in
-            self.fetchImageResult = result
-        }
-
-        serviceMock.fetchImageArgs?.completion(.success(testImage))
-
-        let image = try? fetchImageResult?.get()
-        XCTAssertEqual(image, testImage)
-    }
-
-    func test_fetchImage_whenResultIsFailure_shoulcCallCompletion_withCorrectError() {
-        let _ = presenter.fetchImage(from: testURL) { result in
-            self.fetchImageResult = result
-        }
-
-        serviceMock.fetchImageArgs?.completion(.failure(.invalidData))
-
-        XCTAssertThrowsError(try fetchImageResult?.get()) { error in
-            XCTAssertEqual(error as? FetchError, .invalidData)
-        }
-    }
 }
 
 struct GalleryDataFixture {

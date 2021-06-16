@@ -4,8 +4,9 @@ import XCTest
 class FetchServiceTests: XCTestCase {
     let sessionMock = URLSessionAdapterMock()
     let testURL = URL(fileURLWithPath: "")
+    let imageCompressorMock = ImageCompressorMock()
     lazy var testRequest = URLRequest(url: testURL)
-    lazy var fetchService = FetchService(session: sessionMock)
+    lazy var fetchService = FetchService(session: sessionMock, imageCompressor: imageCompressorMock)
 
     var fetchDataResult: Result<JSONObject, FetchError>?
     var fetchImageResult: Result<UIImage, FetchError>?

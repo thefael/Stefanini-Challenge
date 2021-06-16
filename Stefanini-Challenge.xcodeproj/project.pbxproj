@@ -36,6 +36,9 @@
 		A8D0468F267A86340078CC04 /* ImageGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */; };
 		A8D04691267A872A0078CC04 /* GalleryPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */; };
 		A8D04693267A95D70078CC04 /* UIImage+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04692267A95D70078CC04 /* UIImage+Compression.swift */; };
+		A8D04695267A9C620078CC04 /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04694267A9C620078CC04 /* ImageCompressor.swift */; };
+		A8D04697267A9CCC0078CC04 /* ImageCompressorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04696267A9CCC0078CC04 /* ImageCompressorMock.swift */; };
+		A8D04699267A9FBC0078CC04 /* SuspendableTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04698267A9FBC0078CC04 /* SuspendableTaskMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGatewayTests.swift; sourceTree = "<group>"; };
 		A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenterMock.swift; sourceTree = "<group>"; };
 		A8D04692267A95D70078CC04 /* UIImage+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Compression.swift"; sourceTree = "<group>"; };
+		A8D04694267A9C620078CC04 /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressor.swift; sourceTree = "<group>"; };
+		A8D04696267A9CCC0078CC04 /* ImageCompressorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressorMock.swift; sourceTree = "<group>"; };
+		A8D04698267A9FBC0078CC04 /* SuspendableTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendableTaskMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 				A8887AE9267972680008AA5A /* SuspendableTask.swift */,
 				A8887AEB267989C60008AA5A /* PageCounter.swift */,
 				A8D04692267A95D70078CC04 /* UIImage+Compression.swift */,
+				A8D04694267A9C620078CC04 /* ImageCompressor.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -200,6 +207,8 @@
 				A8D0468A267A7DB00078CC04 /* FetchServiceMock.swift */,
 				A8D0468C267A7FEF0078CC04 /* GalleryPresentableMock.swift */,
 				A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */,
+				A8D04696267A9CCC0078CC04 /* ImageCompressorMock.swift */,
+				A8D04698267A9FBC0078CC04 /* SuspendableTaskMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -318,6 +327,7 @@
 				A87CF2A6267860C600CA51E9 /* Constants.swift in Sources */,
 				A8887ADF2678F92C0008AA5A /* GalleryCell.swift in Sources */,
 				A8887AE2267925240008AA5A /* FetchError.swift in Sources */,
+				A8D04695267A9C620078CC04 /* ImageCompressor.swift in Sources */,
 				A8D0467F267A66150078CC04 /* URLSessionAdapter.swift in Sources */,
 				A87CF2A92678653800CA51E9 /* GalleryPresenter.swift in Sources */,
 				A81FA5A026783C680025F8F6 /* GalleryViewController.swift in Sources */,
@@ -339,11 +349,13 @@
 				A8D0468F267A86340078CC04 /* ImageGatewayTests.swift in Sources */,
 				A8D04683267A7ABA0078CC04 /* JSONObject.swift in Sources */,
 				A8D04686267A7B320078CC04 /* ImageCacheTests.swift in Sources */,
+				A8D04699267A9FBC0078CC04 /* SuspendableTaskMock.swift in Sources */,
 				A8D04691267A872A0078CC04 /* GalleryPresenterMock.swift in Sources */,
 				A8D0468B267A7DB00078CC04 /* FetchServiceMock.swift in Sources */,
 				A8D0467D267A566F0078CC04 /* ImageCacheMock.swift in Sources */,
 				A8D04689267A7D670078CC04 /* GalleryPresenterTests.swift in Sources */,
 				A8D04681267A6B1F0078CC04 /* URLSessionAdapterMock.swift in Sources */,
+				A8D04697267A9CCC0078CC04 /* ImageCompressorMock.swift in Sources */,
 				A8D0468D267A7FEF0078CC04 /* GalleryPresentableMock.swift in Sources */,
 				A8D04679267A55AA0078CC04 /* FetchServiceTests.swift in Sources */,
 			);
