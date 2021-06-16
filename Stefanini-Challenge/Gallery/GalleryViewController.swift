@@ -8,6 +8,7 @@ protocol GalleryPresentable: AnyObject {
 class GalleryViewController: UIViewController {
     let galleryView = GalleryView(frame: Constants.screen)
     let presenter = GalleryPresenter()
+    let imageGateway = ImageGateway()
     let dataSource = CollectionViewDataSource<String, GalleryCell>()
 
     override func loadView() {
@@ -27,19 +28,26 @@ class GalleryViewController: UIViewController {
     private func configureCell() {
         dataSource.configureCell = { url, cell in
             cell.imageLink = url
+            cell.fetchImage(from: self.imageGateway)
         }
+    }
+
+    private func showAlert(title: String, message: String, actionTitle: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: {_ in }))
     }
 }
 
 extension GalleryViewController: GalleryPresentable {
     func presentLinks(_ links: [String]) {
         DispatchQueue.main.async {
-            self.dataSource.items = links
+            self.dataSource.items.append(contentsOf: links)
             self.galleryView.collectionView.reloadData()
+            self.galleryView.activity.stopAnimating()
         }
     }
 
     func presentError(_ error: Error) {
-        print(error)
+        showAlert(title: "Deu ruim, man!", message: error.localizedDescription, actionTitle: "Ok")
     }
 }
