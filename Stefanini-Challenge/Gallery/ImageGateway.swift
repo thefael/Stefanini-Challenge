@@ -5,10 +5,10 @@ protocol ImageGatewayType {
 }
 
 class ImageGateway: ImageGatewayType {
-    let presenter: FetchServiceType
+    let presenter: GalleryPresenterType
     let cache: ImageCacheType
 
-    init(presenter: FetchServiceType = FetchService(), cache: ImageCacheType = ImageCache()) {
+    init(presenter: GalleryPresenterType = GalleryPresenter(), cache: ImageCacheType = ImageCache()) {
         self.presenter = presenter
         self.cache = cache
     }
