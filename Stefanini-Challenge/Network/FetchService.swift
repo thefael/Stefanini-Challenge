@@ -6,39 +6,45 @@ protocol FetchServiceType {
 }
 
 class FetchService: FetchServiceType {
-    let session: URLSession
+    let session: URLSessionAdaptable
     let decoder: JSONDecoder
+    let imageCompressor: ImageCompressor
+    static let shared = FetchService()
 
-    init(session: URLSession = .shared, decoder: JSONDecoder = .init()) {
+    init(session: URLSessionAdaptable = URLSessionAdapter(),
+         decoder: JSONDecoder = .init(),
+         imageCompressor: ImageCompressor = JPEGCompressor()) {
         self.session = session
         self.decoder = decoder
+        self.imageCompressor = imageCompressor
     }
 
     func fetchData<T: Decodable>(from request: URLRequest?, completion: @escaping ((Result<T, FetchError>) -> Void)) {
         guard let request = request else { completion(.failure(.invalidRequest)); return }
-        session.dataTask(with: request) { data, _, _ in
-            if let data = data {
+        session.fetchData(request: request) { result in
+            switch result {
+            case .success(let data):
                 do {
                     let model = try self.decoder.decode(T.self, from: data)
                     completion(.success(model))
                 } catch { completion(.failure(.failedToDecodeData)) }
-            } else {
-                completion(.failure(.invalidData))
+            case .failure(let error):
+                completion(.failure(error))
             }
-        }.resume()
+        }
     }
 
     func fetchImage(from url: URL?, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask? {
         guard let url = url else { completion(.failure(.invalidURL)); return nil }
-        let dataTask = session.dataTask(with: url) { data, _, _ in
-            if let data = data,
-               let image = UIImage(data: data) {
-                completion(.success(image))
-            } else {
-                completion(.failure(.failedToDecodeData))
+        let task = session.fetchImage(from: url) { [weak self] result in
+            switch result {
+            case .success(let image):
+                guard let newImage = self?.imageCompressor.compress(image) else { return }
+                completion(.success(newImage))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
-        dataTask.resume()
-        return SuspendableDataTask(task: dataTask)
+        return task
     }
 }

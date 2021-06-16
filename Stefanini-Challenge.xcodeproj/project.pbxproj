@@ -24,7 +24,32 @@
 		A8887AE626793F4F0008AA5A /* ImageGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AE526793F4F0008AA5A /* ImageGateway.swift */; };
 		A8887AEA267972680008AA5A /* SuspendableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AE9267972680008AA5A /* SuspendableTask.swift */; };
 		A8887AEC267989C60008AA5A /* PageCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8887AEB267989C60008AA5A /* PageCounter.swift */; };
+		A8D04679267A55AA0078CC04 /* FetchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04678267A55AA0078CC04 /* FetchServiceTests.swift */; };
+		A8D0467D267A566F0078CC04 /* ImageCacheMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0467C267A566F0078CC04 /* ImageCacheMock.swift */; };
+		A8D0467F267A66150078CC04 /* URLSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0467E267A66150078CC04 /* URLSessionAdapter.swift */; };
+		A8D04681267A6B1F0078CC04 /* URLSessionAdapterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04680267A6B1F0078CC04 /* URLSessionAdapterMock.swift */; };
+		A8D04683267A7ABA0078CC04 /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04682267A7ABA0078CC04 /* JSONObject.swift */; };
+		A8D04686267A7B320078CC04 /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04685267A7B320078CC04 /* ImageCacheTests.swift */; };
+		A8D04689267A7D670078CC04 /* GalleryPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04688267A7D670078CC04 /* GalleryPresenterTests.swift */; };
+		A8D0468B267A7DB00078CC04 /* FetchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0468A267A7DB00078CC04 /* FetchServiceMock.swift */; };
+		A8D0468D267A7FEF0078CC04 /* GalleryPresentableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0468C267A7FEF0078CC04 /* GalleryPresentableMock.swift */; };
+		A8D0468F267A86340078CC04 /* ImageGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */; };
+		A8D04691267A872A0078CC04 /* GalleryPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */; };
+		A8D04693267A95D70078CC04 /* UIImage+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04692267A95D70078CC04 /* UIImage+Compression.swift */; };
+		A8D04695267A9C620078CC04 /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04694267A9C620078CC04 /* ImageCompressor.swift */; };
+		A8D04697267A9CCC0078CC04 /* ImageCompressorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04696267A9CCC0078CC04 /* ImageCompressorMock.swift */; };
+		A8D04699267A9FBC0078CC04 /* SuspendableTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D04698267A9FBC0078CC04 /* SuspendableTaskMock.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8D04673267A55180078CC04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A81FA59026783C680025F8F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A81FA59726783C680025F8F6;
+			remoteInfo = "Stefanini-Challenge";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A81FA59826783C680025F8F6 /* Stefanini-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stefanini-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,10 +71,34 @@
 		A8887AE526793F4F0008AA5A /* ImageGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGateway.swift; sourceTree = "<group>"; };
 		A8887AE9267972680008AA5A /* SuspendableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendableTask.swift; sourceTree = "<group>"; };
 		A8887AEB267989C60008AA5A /* PageCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCounter.swift; sourceTree = "<group>"; };
+		A8D0466E267A55180078CC04 /* Stefanini-Challenge-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stefanini-Challenge-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D04672267A55180078CC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8D04678267A55AA0078CC04 /* FetchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchServiceTests.swift; sourceTree = "<group>"; };
+		A8D0467C267A566F0078CC04 /* ImageCacheMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheMock.swift; sourceTree = "<group>"; };
+		A8D0467E267A66150078CC04 /* URLSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapter.swift; sourceTree = "<group>"; };
+		A8D04680267A6B1F0078CC04 /* URLSessionAdapterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapterMock.swift; sourceTree = "<group>"; };
+		A8D04682267A7ABA0078CC04 /* JSONObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObject.swift; sourceTree = "<group>"; };
+		A8D04685267A7B320078CC04 /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
+		A8D04688267A7D670078CC04 /* GalleryPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenterTests.swift; sourceTree = "<group>"; };
+		A8D0468A267A7DB00078CC04 /* FetchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchServiceMock.swift; sourceTree = "<group>"; };
+		A8D0468C267A7FEF0078CC04 /* GalleryPresentableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresentableMock.swift; sourceTree = "<group>"; };
+		A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGatewayTests.swift; sourceTree = "<group>"; };
+		A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenterMock.swift; sourceTree = "<group>"; };
+		A8D04692267A95D70078CC04 /* UIImage+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Compression.swift"; sourceTree = "<group>"; };
+		A8D04694267A9C620078CC04 /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressor.swift; sourceTree = "<group>"; };
+		A8D04696267A9CCC0078CC04 /* ImageCompressorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressorMock.swift; sourceTree = "<group>"; };
+		A8D04698267A9FBC0078CC04 /* SuspendableTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendableTaskMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A81FA59526783C680025F8F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D0466B267A55180078CC04 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				A81FA59A26783C680025F8F6 /* Stefanini-Challenge */,
+				A8D0466F267A55180078CC04 /* Stefanini-Challenge-Tests */,
 				A81FA59926783C680025F8F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A81FA59826783C680025F8F6 /* Stefanini-Challenge.app */,
+				A8D0466E267A55180078CC04 /* Stefanini-Challenge-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +160,7 @@
 				A87CF2AB2678656700CA51E9 /* FetchService.swift */,
 				A87CF2AF267869E900CA51E9 /* Endpoints.swift */,
 				A8887ADC2678F8A90008AA5A /* CollectionViewDataSource.swift */,
+				A8D0467E267A66150078CC04 /* URLSessionAdapter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -120,8 +172,54 @@
 				A8887AE326793E820008AA5A /* ImageCache.swift */,
 				A8887AE9267972680008AA5A /* SuspendableTask.swift */,
 				A8887AEB267989C60008AA5A /* PageCounter.swift */,
+				A8D04692267A95D70078CC04 /* UIImage+Compression.swift */,
+				A8D04694267A9C620078CC04 /* ImageCompressor.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		A8D0466F267A55180078CC04 /* Stefanini-Challenge-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A8D04687267A7D510078CC04 /* GalleryTests */,
+				A8D0467A267A56540078CC04 /* Helpers */,
+				A8D04678267A55AA0078CC04 /* FetchServiceTests.swift */,
+				A8D04685267A7B320078CC04 /* ImageCacheTests.swift */,
+				A8D04672267A55180078CC04 /* Info.plist */,
+			);
+			path = "Stefanini-Challenge-Tests";
+			sourceTree = "<group>";
+		};
+		A8D0467A267A56540078CC04 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A8D04682267A7ABA0078CC04 /* JSONObject.swift */,
+				A8D0467B267A565A0078CC04 /* Mocks */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A8D0467B267A565A0078CC04 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0467C267A566F0078CC04 /* ImageCacheMock.swift */,
+				A8D04680267A6B1F0078CC04 /* URLSessionAdapterMock.swift */,
+				A8D0468A267A7DB00078CC04 /* FetchServiceMock.swift */,
+				A8D0468C267A7FEF0078CC04 /* GalleryPresentableMock.swift */,
+				A8D04690267A872A0078CC04 /* GalleryPresenterMock.swift */,
+				A8D04696267A9CCC0078CC04 /* ImageCompressorMock.swift */,
+				A8D04698267A9FBC0078CC04 /* SuspendableTaskMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A8D04687267A7D510078CC04 /* GalleryTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8D04688267A7D670078CC04 /* GalleryPresenterTests.swift */,
+				A8D0468E267A86340078CC04 /* ImageGatewayTests.swift */,
+			);
+			path = GalleryTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +242,24 @@
 			productReference = A81FA59826783C680025F8F6 /* Stefanini-Challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A8D0466D267A55180078CC04 /* Stefanini-Challenge-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8D04677267A55180078CC04 /* Build configuration list for PBXNativeTarget "Stefanini-Challenge-Tests" */;
+			buildPhases = (
+				A8D0466A267A55180078CC04 /* Sources */,
+				A8D0466B267A55180078CC04 /* Frameworks */,
+				A8D0466C267A55180078CC04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8D04674267A55180078CC04 /* PBXTargetDependency */,
+			);
+			name = "Stefanini-Challenge-Tests";
+			productName = "Stefanini-Challenge-Tests";
+			productReference = A8D0466E267A55180078CC04 /* Stefanini-Challenge-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +271,10 @@
 				TargetAttributes = {
 					A81FA59726783C680025F8F6 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					A8D0466D267A55180078CC04 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = A81FA59726783C680025F8F6;
 					};
 				};
 			};
@@ -172,6 +292,7 @@
 			projectRoot = "";
 			targets = (
 				A81FA59726783C680025F8F6 /* Stefanini-Challenge */,
+				A8D0466D267A55180078CC04 /* Stefanini-Challenge-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +306,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8D0466C267A55180078CC04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -192,12 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D04693267A95D70078CC04 /* UIImage+Compression.swift in Sources */,
 				A8887AE626793F4F0008AA5A /* ImageGateway.swift in Sources */,
 				A87CF2AE267865A100CA51E9 /* Gallery.swift in Sources */,
 				A8887AE426793E820008AA5A /* ImageCache.swift in Sources */,
 				A87CF2A6267860C600CA51E9 /* Constants.swift in Sources */,
 				A8887ADF2678F92C0008AA5A /* GalleryCell.swift in Sources */,
 				A8887AE2267925240008AA5A /* FetchError.swift in Sources */,
+				A8D04695267A9C620078CC04 /* ImageCompressor.swift in Sources */,
+				A8D0467F267A66150078CC04 /* URLSessionAdapter.swift in Sources */,
 				A87CF2A92678653800CA51E9 /* GalleryPresenter.swift in Sources */,
 				A81FA5A026783C680025F8F6 /* GalleryViewController.swift in Sources */,
 				A81FA59C26783C680025F8F6 /* AppDelegate.swift in Sources */,
@@ -211,7 +342,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A8D0466A267A55180078CC04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D0468F267A86340078CC04 /* ImageGatewayTests.swift in Sources */,
+				A8D04683267A7ABA0078CC04 /* JSONObject.swift in Sources */,
+				A8D04686267A7B320078CC04 /* ImageCacheTests.swift in Sources */,
+				A8D04699267A9FBC0078CC04 /* SuspendableTaskMock.swift in Sources */,
+				A8D04691267A872A0078CC04 /* GalleryPresenterMock.swift in Sources */,
+				A8D0468B267A7DB00078CC04 /* FetchServiceMock.swift in Sources */,
+				A8D0467D267A566F0078CC04 /* ImageCacheMock.swift in Sources */,
+				A8D04689267A7D670078CC04 /* GalleryPresenterTests.swift in Sources */,
+				A8D04681267A6B1F0078CC04 /* URLSessionAdapterMock.swift in Sources */,
+				A8D04697267A9CCC0078CC04 /* ImageCompressorMock.swift in Sources */,
+				A8D0468D267A7FEF0078CC04 /* GalleryPresentableMock.swift in Sources */,
+				A8D04679267A55AA0078CC04 /* FetchServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8D04674267A55180078CC04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A81FA59726783C680025F8F6 /* Stefanini-Challenge */;
+			targetProxy = A8D04673267A55180078CC04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A81FA5AA26783C6B0025F8F6 /* Debug */ = {
@@ -368,6 +526,46 @@
 			};
 			name = Release;
 		};
+		A8D04675267A55180078CC04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CY35DG58QL;
+				INFOPLIST_FILE = "Stefanini-Challenge-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app-do-fael.Stefanini-Challenge-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stefanini-Challenge.app/Stefanini-Challenge";
+			};
+			name = Debug;
+		};
+		A8D04676267A55180078CC04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CY35DG58QL;
+				INFOPLIST_FILE = "Stefanini-Challenge-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app-do-fael.Stefanini-Challenge-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stefanini-Challenge.app/Stefanini-Challenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -385,6 +583,15 @@
 			buildConfigurations = (
 				A81FA5AD26783C6B0025F8F6 /* Debug */,
 				A81FA5AE26783C6B0025F8F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8D04677267A55180078CC04 /* Build configuration list for PBXNativeTarget "Stefanini-Challenge-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D04675267A55180078CC04 /* Debug */,
+				A8D04676267A55180078CC04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
