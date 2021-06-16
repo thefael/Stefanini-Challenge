@@ -8,11 +8,15 @@ protocol FetchServiceType {
 class FetchService: FetchServiceType {
     let session: URLSessionAdaptable
     let decoder: JSONDecoder
+    let imageCompressor: ImageCompressor
     static let shared = FetchService()
 
-    init(session: URLSessionAdaptable = URLSessionAdapter(), decoder: JSONDecoder = .init()) {
+    init(session: URLSessionAdaptable = URLSessionAdapter(),
+         decoder: JSONDecoder = .init(),
+         imageCompressor: ImageCompressor = JPEGCompressor()) {
         self.session = session
         self.decoder = decoder
+        self.imageCompressor = imageCompressor
     }
 
     func fetchData<T: Decodable>(from request: URLRequest?, completion: @escaping ((Result<T, FetchError>) -> Void)) {
@@ -32,10 +36,10 @@ class FetchService: FetchServiceType {
 
     func fetchImage(from url: URL?, completion: @escaping ((Result<UIImage, FetchError>) -> Void)) -> SuspendableTask? {
         guard let url = url else { completion(.failure(.invalidURL)); return nil }
-        let task = session.fetchImage(from: url) { result in
+        let task = session.fetchImage(from: url) { [weak self] result in
             switch result {
             case .success(let image):
-                guard let newImage = image.jpeg(.lowest).flatMap(UIImage.init) else { return }
+                guard let newImage = self?.imageCompressor.compress(image) else { return }
                 completion(.success(newImage))
             case .failure(let error):
                 completion(.failure(error))

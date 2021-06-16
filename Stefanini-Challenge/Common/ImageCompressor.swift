@@ -1,8 +1,11 @@
-//
-//  ImageCompressor.swift
-//  Stefanini-Challenge
-//
-//  Created by Rafael Rodrigues on 16/06/21.
-//
+import UIKit
 
-import Foundation
+protocol ImageCompressor {
+    func compress(_ image: UIImage) -> UIImage?
+}
+
+class JPEGCompressor: ImageCompressor {
+    func compress(_ image: UIImage) -> UIImage? {
+        image.jpeg(.lowest).flatMap(UIImage.init)
+    }
+}
