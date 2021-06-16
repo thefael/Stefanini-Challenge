@@ -21,20 +21,22 @@ enum Endpoints {
         url.appendPathComponent("/hot/viral/day")
         
         var request = URLRequest(url: url)
-        request.setValue("Client-ID 1ceddedc03a5d71", forHTTPHeaderField: "Authorization")
+        request.setValue("Client-ID 6a9ee15238832a6", forHTTPHeaderField: "Authorization")
         return request
     }
 
-    static func searchGalleryRequest() -> URLRequest? {
+    static func getSearchGalleryRequest() -> URLRequest? {
         var components = baseComponents
         components.queryItems = [
             URLQueryItem(name: "q", value: "cats")
         ]
         guard var url = components.url else { return nil }
-        url.appendPathComponent("/search/top/week")
+        let pageNumber = PageCounter.getPageNumber()
+        print(pageNumber)
+        url.appendPathComponent("/search/top/week/\(pageNumber)")
 
         var request = URLRequest(url: url)
-        request.setValue("Client-ID 1ceddedc03a5d71", forHTTPHeaderField: "Authorization")
+        request.setValue("Client-ID 6a9ee15238832a6", forHTTPHeaderField: "Authorization")
         return request
     }
 }
